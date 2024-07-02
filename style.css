@@ -1,0 +1,136 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+:root{
+    --very-dark-blue-main: hsl(217, 54%, 11%);
+    --very-dark-blue-card: hsl(216, 50%, 16%);
+    --very-dark-blue-line: hsl(215, 32%, 27%);
+    --white: hsl(0, 0%, 100%);
+    --soft-blue: hsl(215, 51%, 70%);
+    --cyan: hsl(178, 100%, 50%);
+}
+
+body{
+    height: 100vh;
+    font-family: 'Outfit';
+    background-color: var(--very-dark-blue-main);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container{
+    background-color: var(--very-dark-blue-card);
+    width: 350px;
+    height: 595px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    border-radius: 5%;
+}
+
+.card, .text_card, .view{
+    width: 86%;
+    border-radius: 5%;
+}
+
+.img-top{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.img-top.card{
+    width: 301px;
+    height: 301px;
+    position: absolute;
+    z-index: 2;
+    border-radius: 5%;
+    display: flex;
+}
+
+.text_card{
+    display: flex;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 0px;
+    min-height: 40%;
+}
+
+#extra{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.itens{
+    display: flex;
+    gap: 10px;
+}
+
+a{
+    text-decoration: none;
+    color: var(--white);
+}
+
+p{
+    font-size: 18px;
+    font-weight: 300px;
+    color: var(--soft-blue);
+}
+
+.itens.eth p{
+    color: var(--cyan);
+    font-weight: 600;
+}
+
+.linha{
+    width: 100%;
+    border-color: hsla(215, 32%, 27%, 0.9);
+}
+
+.profile img{
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+    border: solid 2px var(--white);
+}
+
+.profile{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 10px;
+}
+
+a:hover{
+    color: var(--cyan);
+}
+
+strong:hover{
+    color: var(--cyan);
+}
+
+.img-top #view{
+    background: hsla(178, 100%, 50%, 0.459);
+    width: 301px;
+    height: 301px;
+    position: absolute;
+    z-index: 1;
+    border-radius: 5%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#view img{
+    width: 20%;
+}
+
+.img-top:not(:hover) #view{
+    display: none;
+}
